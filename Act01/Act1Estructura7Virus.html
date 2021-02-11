@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>I.E.S. Cantillana</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function buscaVirusARNMonocatenarioPositivo(){
+        //    alert("1");
+            var elementoImagen = document.getElementById("virusARNMonocatenarioPositivo");
+            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
+        }
+        function buscaVirusARNMonocatenarioRetrotranscrito(){
+         //   alert("2");
+            document.getElementById("virusARNMonocatenarioRetrotranscrito").innerHTML = basicCardVirusCorrecto();
+        }
+
+        function basicCardVirusCorrecto(){
+            return '<div class="card" style="width: 18rem;">' +
+  '<img class="card-img-top" src="..." alt="Card image cap">' +
+  '<div class="card-body">' +
+    '<h5 class="card-title">Card title</h5>' +
+    '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>' +
+    '<a href="#" class="btn btn-primary">Go somewhere</a>' +
+  '</div>' +
+'</div>';
+        }
+    </script>
+</head>
+
+<body>
+    <div style="background-color: 754ffe; padding: 10px;">
+        <h1>I.E.S. Cantillana - Feria de las Ciencias</h1>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Estructura de los 7 virus</h1>
+            <p>Busca el virus correcto. Si lo encuentras te contaremos cosas muy interesantes.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>¿Cuál es el virus ARN monocatenario retrotranscrito?</p>
+        <div class="float-left" width="304" height="236">
+            <div id="virusARNMonocatenarioPositivo">
+                <img onclick="buscaVirusARNMonocatenarioPositivo()" src="./img/virusARNMonocatenarioPositivo.jpeg"  alt="Virus ARN Monocatenario Positivo" width="304" height="236" > 
+            </div>
+        </div>
+        <div class="float-right" width="304" height="236">
+            <div id="virusARNMonocatenarioRetrotranscrito">
+                <img onclick="buscaVirusARNMonocatenarioRetrotranscrito()" src="./img/virusARNMonocatenarioRetrotranscrito.jpeg"  alt="Virus ARN Monocatenario Retrotranscrito" width="304" height="236"> 
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
