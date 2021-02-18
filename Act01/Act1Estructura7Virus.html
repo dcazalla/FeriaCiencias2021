@@ -9,25 +9,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        function buscaVirusARNMonocatenarioPositivo(){
-        //    alert("1");
-            var elementoImagen = document.getElementById("virusARNMonocatenarioPositivo");
+        function buscaVirus1Incorrecto() {
+            var elementoImagen = document.getElementById("virus1");
             elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
         }
-        function buscaVirusARNMonocatenarioRetrotranscrito(){
-         //   alert("2");
-            document.getElementById("virusARNMonocatenarioRetrotranscrito").innerHTML = basicCardVirusCorrecto();
+        function buscaVirus1Correcto() {
+            document.getElementById("virus1").innerHTML = basicCardVirusCorrecto();
         }
 
-        function basicCardVirusCorrecto(){
+        function buscaVirus2Incorrecto() {
+            var elementoImagen = document.getElementById("virus2");
+            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
+        }
+        function buscaVirus2Correcto() {
+            document.getElementById("virus2").innerHTML = basicCardVirusCorrecto();
+        }
+        function buscaVirus3Incorrecto() {
+            var elementoImagen = document.getElementById("virus3");
+            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
+        }
+        function buscaVirus3Correcto() {
+            document.getElementById("virus3").innerHTML = basicCardVirusCorrecto();
+        }
+        function buscaVirus4Incorrecto() {
+            var elementoImagen = document.getElementById("virus4");
+            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
+        }
+        function buscaVirus4Correcto() {
+            document.getElementById("virus4").innerHTML = basicCardVirusCorrecto();
+        }
+
+        function basicCardVirusCorrecto() {
             return '<div class="card" style="width: 18rem;">' +
-  '<img class="card-img-top" src="..." alt="Card image cap">' +
-  '<div class="card-body">' +
-    '<h5 class="card-title">Card title</h5>' +
-    '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>' +
-    '<a href="#" class="btn btn-primary">Go somewhere</a>' +
-  '</div>' +
-'</div>';
+                '<img class="card-img-top" src="..." alt="Card image cap">' +
+                '<div class="card-body">' +
+                '<h5 class="card-title">Card title</h5>' +
+                '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>' +
+                '<a href="#" class="btn btn-primary">Go somewhere</a>' +
+                '</div>' +
+                '</div>';
+        }
+        function basicCardVirusIncorrecto() {
+            return '<div class="card" style="width: 18rem;">' +
+                '<img class="card-img-top" src="..." alt="Card image cap">' +
+                '<div class="card-body">' +
+                '<h5 class="card-title">Card title</h5>' +
+                '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>' +
+                '<a href="#" class="btn btn-primary">Go somewhere</a>' +
+                '</div>' +
+                '</div>';
         }
     </script>
 </head>
@@ -37,25 +67,51 @@
         <h1>I.E.S. Cantillana - Feria de las Ciencias</h1>
     </div>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1>Estructura de los 7 virus</h1>
-            <p>Busca el virus correcto. Si lo encuentras te contaremos cosas muy interesantes.</p>
-        </div>
+    <div style="background-color: e5e9f0; padding: 10px;">
+        <h1 style="text-align: center;">Estructura de los 7 virus</h1>
+        <h3 style="text-align: center;"> Busca el virus correcto. Si lo encuentras te contaremos cosas muy interesantes.</h3>
+</div>
+
+    <div>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">VIRUS 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIRUS 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIRUS 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIRUS 4</a>
+            </li>
+          </ul>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <p>¿Cuál es el virus ARN monocatenario retrotranscrito?</p>
-        <div class="float-left" width="304" height="236">
-            <div id="virusARNMonocatenarioPositivo">
-                <img onclick="buscaVirusARNMonocatenarioPositivo()" src="./img/virusARNMonocatenarioPositivo.jpeg"  alt="Virus ARN Monocatenario Positivo" width="304" height="236" > 
-            </div>
+        <div class="float-left" id="virus1" width="20%" height="200" style="padding: 25px;">
+            <img onclick="buscaVirus1()" src="./img/virusARNMonocatenarioPositivo.jpeg"
+                alt="Virus ARN Monocatenario Positivo" width="304" height="236">
         </div>
-        <div class="float-right" width="304" height="236">
-            <div id="virusARNMonocatenarioRetrotranscrito">
-                <img onclick="buscaVirusARNMonocatenarioRetrotranscrito()" src="./img/virusARNMonocatenarioRetrotranscrito.jpeg"  alt="Virus ARN Monocatenario Retrotranscrito" width="304" height="236"> 
-            </div>
+        <div class="float-left" id="virus2" width="20%" height="200"
+            style="padding: 25px;">
+            <img onclick="buscaVirusARNMonocatenarioRetrotranscrito()"
+                src="./img/virusARNMonocatenarioRetrotranscrito.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"
+                width="304" height="236">
         </div>
+        <div class="float-left" id="virus3" width="20%" height="200" style="padding: 25px;">
+            <img onclick="buscaVirusARNMonocatenarioPositivo()" src="./img/virusARNMonocatenarioPositivo.jpeg"
+                alt="Virus ARN Monocatenario Positivo" width="304" height="236">
+        </div>
+        <div class="float-left" id="virus4" width="20%" height="200"
+            style="padding: 25px;">
+            <img onclick="buscaVirusARNMonocatenarioRetrotranscrito()"
+                src="./img/virusARNMonocatenarioRetrotranscrito.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"
+                width="304" height="236">
+        </div>
+    </div>
     </div>
 </body>
 
