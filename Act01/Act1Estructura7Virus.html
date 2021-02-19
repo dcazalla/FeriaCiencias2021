@@ -39,23 +39,23 @@
             document.getElementById("virus4").innerHTML = basicCardVirusCorrecto();
         }
 
-        function basicCardVirusCorrecto() {
+        function basicCardVirusCorrecto(rutaimg, alt, titulo, texto, textoEnlace, enlaceVideo) {
             return '<div class="card" style="width: 18rem;">' +
-                '<img class="card-img-top" src="..." alt="Card image cap">' +
+                '<img class="card-img-top" src="'+ rutaimg +'" alt="Card image cap">' +
                 '<div class="card-body">' +
-                '<h5 class="card-title">Card title</h5>' +
-                '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>' +
-                '<a href="#" class="btn btn-primary">Go somewhere</a>' +
+                '<h5 class="card-title">' + titulo +'</h5>' +
+                '<p class="card-text">'+ texto +'</p>' +
+                '<a href="'+ enlaceVideo +'" class="btn btn-primary">'+ textoEnlace+'</a>' +
                 '</div>' +
                 '</div>';
         }
-        function basicCardVirusIncorrecto() {
+        function basicCardVirusIncorrecto(rutaimg, alt, titulo, texto, textoEnlace, enlaceVideo) {
             return '<div class="card" style="width: 18rem;">' +
-                '<img class="card-img-top" src="..." alt="Card image cap">' +
+                '<img class="card-img-top" src="'+ rutaimg +'" alt="Card image cap">' +
                 '<div class="card-body">' +
-                '<h5 class="card-title">Card title</h5>' +
-                '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>' +
-                '<a href="#" class="btn btn-primary">Go somewhere</a>' +
+                '<h5 class="card-title">' + titulo +'</h5>' +
+                '<p class="card-text">'+ texto +'</p>' +
+                '<a href="'+ enlaceVideo +'" class="btn btn-primary">'+ textoEnlace+'</a>' +
                 '</div>' +
                 '</div>';
         }
@@ -75,16 +75,16 @@
     <div>
         <ul class="nav nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" href="#">VIRUS 1</a>
+              <a class="nav-link active" href="#">virus ARN monocatenario retrotranscrito</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">VIRUS 2</a>
+              <a class="nav-link" href="#">Virus ARN Monocatenario Positivo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">VIRUS 3</a>
+              <a class="nav-link" href="#">Virus Gripe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">VIRUS 4</a>
+              <a class="nav-link" href="#">Virus Gripe A</a>
             </li>
           </ul>
     </div>
@@ -102,13 +102,13 @@
                 width="304" height="236">
         </div>
         <div class="float-left" id="virus3" width="20%" height="200" style="padding: 25px;">
-            <img onclick="buscaVirusARNMonocatenarioPositivo()" src="./img/virusARNMonocatenarioPositivo.jpeg"
-                alt="Virus ARN Monocatenario Positivo" width="304" height="236">
+            <img onclick="buscaVirusARNMonocatenarioPositivo()" src="./img/VirusGripe.jpg"
+                alt="Virus Gripe" width="304" height="236">
         </div>
         <div class="float-left" id="virus4" width="20%" height="200"
             style="padding: 25px;">
             <img onclick="buscaVirusARNMonocatenarioRetrotranscrito()"
-                src="./img/virusARNMonocatenarioRetrotranscrito.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"
+                src="./img/VirusGripeA.jpg" alt="Virus Gripe A"
                 width="304" height="236">
         </div>
     </div>
