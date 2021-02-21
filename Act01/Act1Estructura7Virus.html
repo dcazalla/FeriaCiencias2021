@@ -9,55 +9,158 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        function buscaVirus1Incorrecto() {
-            var elementoImagen = document.getElementById("virus1");
-            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
-        }
-        function buscaVirus1Correcto() {
-            document.getElementById("virus1").innerHTML = basicCardVirusCorrecto();
-        }
+        var rutaVirus1 = "./img/virus1.jpeg";
+        var rutaVirus2 = "./img/virus2.jpeg";
+        var rutaVirus3 = "./img/virus3.jpg";
+        var rutaVirus4 = "./img/virus4.jpg";
+        var alt = "Imagen no encontrada";
+        var tituloVirus1 = "Virus 1";
+        var tituloVirus2 = "Virus 2";
+        var tituloVirus3 = "Virus 3";
+        var tituloVirus4 = "Virus 4";
+        var textoVirus1 = "Este es el virus 1. El virus 1 es un virus de prueba, que cambiará cuando estén los virus auténticos";
+        var textoVirus2 = "Este es el virus 2. El virus 2 es un virus de prueba, que cambiará cuando estén los virus auténticos";
+        var textoVirus3 = "Este es el virus 3. El virus 3 es un virus de prueba, que cambiará cuando estén los virus auténticos";
+        var textoVirus4 = "Este es el virus 4. El virus 4 es un virus de prueba, que cambiará cuando estén los virus auténticos";
+        var enlaceVideoVirus1 = "";
+        var enlaceVideoVirus2 = "";
+        var enlaceVideoVirus3 = "";
+        var enlaceVideoVirus4 = "";
+        var textoEnlaceVirus1 = "Pulsa para ver el vídeo";
+        var textoEnlaceVirus2 = "Pulsa para ver el vídeo";
+        var textoEnlaceVirus3 = "Pulsa para ver el vídeo";
+        var textoEnlaceVirus4 = "Pulsa para ver el vídeo";
 
-        function buscaVirus2Incorrecto() {
-            var elementoImagen = document.getElementById("virus2");
-            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
+        function buscaVirus1correcto(padre) {
+            document.getElementById("virus1").innerHTML = basicCardVirusCorrecto(rutaVirus1, alt, tituloVirus1, textoVirus1, textoEnlaceVirus1, enlaceVideoVirus1);
         }
-        function buscaVirus2Correcto() {
-            document.getElementById("virus2").innerHTML = basicCardVirusCorrecto();
+        function buscaVirus1Incorrecto(padre) {
+            document.getElementById("virus1").innerHTML = basicCardVirusIncorrecto(rutaVirus1, alt, tituloVirus1, textoVirus1, textoEnlaceVirus1, enlaceVideoVirus1);
         }
-        function buscaVirus3Incorrecto() {
-            var elementoImagen = document.getElementById("virus3");
-            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
+        function buscaVirus2correcto(padre) {
+            document.getElementById("virus2").innerHTML = basicCardVirusCorrecto(rutaVirus2, alt, tituloVirus2, textoVirus2, textoEnlaceVirus2, enlaceVideoVirus2);
         }
-        function buscaVirus3Correcto() {
-            document.getElementById("virus3").innerHTML = basicCardVirusCorrecto();
+        function buscaVirus2Incorrecto(padre) {
+            document.getElementById("virus2").innerHTML = basicCardVirusIncorrecto(rutaVirus2, alt, tituloVirus2, textoVirus2, textoEnlaceVirus2, enlaceVideoVirus2);
         }
-        function buscaVirus4Incorrecto() {
-            var elementoImagen = document.getElementById("virus4");
-            elementoImagen.innerHTML = "<p>Oooooops!!! Sigue buscando.</p>";
+        function buscaVirus3correcto(padre) {
+            document.getElementById("virus3").innerHTML = basicCardVirusCorrecto(rutaVirus3, alt, tituloVirus3, textoVirus3, textoEnlaceVirus3, enlaceVideoVirus3);
         }
-        function buscaVirus4Correcto() {
-            document.getElementById("virus4").innerHTML = basicCardVirusCorrecto();
+        function buscaVirus3Incorrecto(padre) {
+            document.getElementById("virus3").innerHTML = basicCardVirusIncorrecto(rutaVirus3, alt, tituloVirus3, textoVirus3, textoEnlaceVirus3, enlaceVideoVirus3);
+        }
+        function buscaVirus4correcto(padre) {
+            document.getElementById("virus4").innerHTML = basicCardVirusCorrecto(rutaVirus4, alt, tituloVirus4, textoVirus4, textoEnlaceVirus4, enlaceVideoVirus4);
+        }
+        function buscaVirus4Incorrecto(padre) {
+            document.getElementById("virus4").innerHTML = basicCardVirusIncorrecto(rutaVirus4, alt, tituloVirus4, textoVirus4, textoEnlaceVirus4, enlaceVideoVirus4);
         }
 
         function basicCardVirusCorrecto(rutaimg, alt, titulo, texto, textoEnlace, enlaceVideo) {
-            return '<div class="card" style="width: 18rem;">' +
-                '<img class="card-img-top" src="'+ rutaimg +'" alt="Card image cap">' +
+            return '<div class="card" style="width: 304; background-color: GreenYellow">' +
+                '<img class="card-img-top" style="width: 304; height: 236" src="' + rutaimg + '" alt="Card image cap">' +
                 '<div class="card-body">' +
-                '<h5 class="card-title">' + titulo +'</h5>' +
-                '<p class="card-text">'+ texto +'</p>' +
-                '<a href="'+ enlaceVideo +'" class="btn btn-primary">'+ textoEnlace+'</a>' +
+                '<h4 class="card-title" style="font-weight: bold;"> ¡CORRECTO! ' + titulo + '</h4>' +
+                '<h5 class="card-text">' + texto + '</h5>' +
+                '<a href="' + enlaceVideo + '" class="btn btn-primary">' + textoEnlace + '</a>' +
                 '</div>' +
                 '</div>';
         }
         function basicCardVirusIncorrecto(rutaimg, alt, titulo, texto, textoEnlace, enlaceVideo) {
-            return '<div class="card" style="width: 18rem;">' +
-                '<img class="card-img-top" src="'+ rutaimg +'" alt="Card image cap">' +
+            return '<div class="card" style="width: 304; background-color: red">' +
+                '<img class="card-img-top" style="width: 304; height: 236" src="' + rutaimg + '" alt="Card image cap">' +
                 '<div class="card-body">' +
-                '<h5 class="card-title">' + titulo +'</h5>' +
-                '<p class="card-text">'+ texto +'</p>' +
-                '<a href="'+ enlaceVideo +'" class="btn btn-primary">'+ textoEnlace+'</a>' +
+                '<h4 class="card-title">OOOOOPPPS INCORRECTO ' + titulo + '</h4>' +
+                '<h5 class="card-text">' + texto + '</h5>' +
+                '<a href="' + enlaceVideo + '" class="btn btn-primary">' + textoEnlace + '</a>' +
                 '</div>' +
                 '</div>';
+        }
+
+        function pagina1() {
+
+            var pag1 = '<div id="pagina" class="container-fluid;" style="padding-left: 10%; padding-right: 10%;">' +
+                '<h2 style="text-align: center; padding: 75px;">¿Cuál es el virus 1?</h2>' +
+                '<div class="float-left" id="virus1" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus1correcto()" src="./img/virus1.jpeg" alt="Virus ARN Monocatenario Positivo"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus2" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus2Incorrecto()" src="./img/virus2.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus3" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus3Incorrecto()" src="./img/virus3.jpg" alt="Virus Gripe" width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus4" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus4Incorrecto()" src="./img/virus4.jpg" alt="Virus Gripe A" width="304" height="236">' +
+                '</div>' +
+                '</div>';
+            document.getElementById("pagina").innerHTML = pag1;
+        }
+
+        function pagina2() {
+
+            var pag2 = '<div id="pagina" class="container-fluid;" style="padding-left: 10%; padding-right: 10%;">' +
+                '<h2 style="text-align: center; padding: 75px;">¿Cuál es el virus 2?</h2>' +
+                '<div class="float-left" id="virus1" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus1Incorrecto()" src="./img/virus1.jpeg" alt="Virus ARN Monocatenario Positivo"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus2" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus2correcto()" src="./img/virus2.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus3" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus3Incorrecto()" src="./img/virus3.jpg" alt="Virus Gripe" width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus4" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus4Incorrecto()" src="./img/virus4.jpg" alt="Virus Gripe A" width="304" height="236">' +
+                '</div>' +
+                '</div>';
+            document.getElementById("pagina").innerHTML = pag2;
+        }
+
+        function pagina3() {
+            var pag3 = '<div id="pagina" class="container-fluid;" style="padding-left: 10%; padding-right: 10%;">' +
+                '<h2 style="text-align: center; padding: 75px;">¿Cuál es el virus 3?</h2>' +
+                '<div class="float-left" id="virus1" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus1Incorrecto()" src="./img/virus1.jpeg" alt="Virus ARN Monocatenario Positivo"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus2" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus2Incorrecto()" src="./img/virus2.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus3" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus3correcto()" src="./img/virus3.jpg" alt="Virus Gripe" width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus4" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus4Incorrecto()" src="./img/virus4.jpg" alt="Virus Gripe A" width="304" height="236">' +
+                '</div>' +
+                '</div>';
+            document.getElementById("pagina").innerHTML = pag3;
+        }
+
+        function pagina4() {
+            var pag4 = '<div id="pagina" class="container-fluid;" style="padding-left: 10%; padding-right: 10%;">' +
+                '<h2 style="text-align: center; padding: 75px;">¿Cuál es el virus 4?</h2>' +
+                '<div class="float-left" id="virus1" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus1Incorrecto()" src="./img/virus1.jpeg" alt="Virus ARN Monocatenario Positivo"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus2" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus2Incorrecto()" src="./img/virus2.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"' +
+                'width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus3" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus3Incorrecto()" src="./img/virus3.jpg" alt="Virus Gripe" width="304" height="236">' +
+                '</div>' +
+                '<div class="float-left" id="virus4" width="20%" height="200" style="padding: 25px;">' +
+                '<img onclick="buscaVirus4correcto()" src="./img/virus4.jpg" alt="Virus Gripe A" width="304" height="236">' +
+                '</div>' +
+                '</div>';
+            document.getElementById("pagina").innerHTML = pag4;
         }
     </script>
 </head>
@@ -68,50 +171,30 @@
     </div>
 
     <div style="background-color: e5e9f0; padding: 10px;">
-        <h1 style="text-align: center;">Estructura de los 7 virus</h1>
-        <h3 style="text-align: center;"> Busca el virus correcto. Si lo encuentras te contaremos cosas muy interesantes.</h3>
-</div>
+        <h1 style="text-align: center;">Estructura de los virus</h1>
+        <h3 style="text-align: center;"> Busca el virus correcto. Si lo encuentras te contaremos cosas muy interesantes.
+        </h3>
+    </div>
 
     <div>
         <ul class="nav nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" href="#">virus ARN monocatenario retrotranscrito</a>
+                <a id="tagVirus1" class="nav-link" href="javascript:pagina1();">Virus 1</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Virus ARN Monocatenario Positivo</a>
+                <a id="tagVirus2" class="nav-link" href="javascript:pagina2();">Virus 2</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Virus Gripe</a>
+                <a id="tagVirus3" class="nav-link" href="javascript:pagina3();">Virus 3</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Virus Gripe A</a>
+                <a id="tagVirus4" class="nav-link" href="javascript:pagina4();">Virus 4</a>
             </li>
-          </ul>
+        </ul>
     </div>
 
-    <div class="container-fluid">
-        <p>¿Cuál es el virus ARN monocatenario retrotranscrito?</p>
-        <div class="float-left" id="virus1" width="20%" height="200" style="padding: 25px;">
-            <img onclick="buscaVirus1()" src="./img/virusARNMonocatenarioPositivo.jpeg"
-                alt="Virus ARN Monocatenario Positivo" width="304" height="236">
-        </div>
-        <div class="float-left" id="virus2" width="20%" height="200"
-            style="padding: 25px;">
-            <img onclick="buscaVirusARNMonocatenarioRetrotranscrito()"
-                src="./img/virusARNMonocatenarioRetrotranscrito.jpeg" alt="Virus ARN Monocatenario Retrotranscrito"
-                width="304" height="236">
-        </div>
-        <div class="float-left" id="virus3" width="20%" height="200" style="padding: 25px;">
-            <img onclick="buscaVirusARNMonocatenarioPositivo()" src="./img/VirusGripe.jpg"
-                alt="Virus Gripe" width="304" height="236">
-        </div>
-        <div class="float-left" id="virus4" width="20%" height="200"
-            style="padding: 25px;">
-            <img onclick="buscaVirusARNMonocatenarioRetrotranscrito()"
-                src="./img/VirusGripeA.jpg" alt="Virus Gripe A"
-                width="304" height="236">
-        </div>
-    </div>
+    <div id="pagina">
+        <h1 style="padding: 100px;text-align: center;">Elige alguno de los virus del menú para comenzar a jugar</h1>
     </div>
 </body>
 
